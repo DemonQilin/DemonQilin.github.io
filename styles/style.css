@@ -49,6 +49,7 @@ h2{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
 
     height: 100vh;
     width: 100vw;
@@ -100,6 +101,7 @@ h2{
     position: fixed;
     bottom: 1vh;
     right: 1vw;
+    z-index: 1;
 
     width: 70px;
     height: 70px;
@@ -117,7 +119,102 @@ h2{
 
 /*========================== BODY ==========================*/
 
-/*================== Section ==================*/
+/*========================= SECTION =========================*/
+.section {
+    margin-top: 4rem;
+    width: 100%;
+    min-width: 280px;
+}
+
+.section-title{
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
 .section-p{
+    margin: 0;
+
     text-align: center;
+}
+
+
+/*======================== SERVICES ========================*/
+
+.services {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    height: 400px;
+
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+}
+
+.service {
+    min-width: 70%;
+    min-height: 316px;
+    margin-right: 15%;
+    margin-left: 15%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: var(--color-claro);
+    border-radius: 10px;
+
+    scroll-snap-align: center;
+}
+
+.service-title {
+    margin-top: 0;
+
+    text-align: center;
+    font-size: 2.2rem;
+
+    color: var(--color-fondo);
+}
+
+.service-logo {
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.service-description {
+    margin: 0;
+
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.services-btns {
+    position: sticky;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+
+}
+
+.services-btn {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+    font-size: 400%;
+
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--color-title);
+
+    cursor: pointer;
 }
