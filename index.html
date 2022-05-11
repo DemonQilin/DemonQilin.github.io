@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
@@ -16,7 +17,7 @@
         <h1 class="header-title">Soy <span>Juan</span> Desarrollador Frontend</h1>
     </header>
     <nav class="menu">
-        <ol class="menu-lista">
+        <ol class="menu-list">
             <li class="menu-item"><a href="#home" class="menu-link">Inicio</a></li>
             <li class="menu-item"><a href="#section1" class="menu-link">Sección 1</a></li>
             <li class="menu-item"><a href="#section2" class="menu-link">Sección 2</a></li>
@@ -25,6 +26,11 @@
             <li class="menu-item"><a href="#section5" class="menu-link">Sección 5</a></li>
         </ol>
     </nav>
+    <button class="btn-menu hamburger hamburger--vortex" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
     <main>
         <section id="section1" class="section">
             <h2 class="section-title"></h2>
@@ -43,6 +49,6 @@
         </section>
     </main>
     <footer></footer>
-    <script src="./scripts/main.js"></script>
+    <script src="./scripts/main.js" type="module"></script>
 </body>
 </html>
