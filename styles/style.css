@@ -23,6 +23,7 @@ html {
 body {
     font-family: var(--font-family);
     font-size: 1.6rem;
+    padding: 2rem 2rem 0;
 
     color: var(--color-letra);
     background-color: var(--color-fondo);
@@ -30,14 +31,22 @@ body {
 
 h2{
     font-size: 3.2rem;
+    font-weight: 500;
+
+    color: var(--color-title);
+    text-align: center;
 }
 
+/*========================= HEADER =========================*/
+.header-title {
+    margin: 0;
+}
 
 /*========================= NAVBAR =========================*/
 
 /*================= Styles Menu =================*/
 .menu{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
 
@@ -88,12 +97,12 @@ h2{
 /*================ Activator Button ================*/
 
 .btn-menu{
-    position: absolute;
+    position: fixed;
     bottom: 1vh;
     right: 1vw;
 
-    width: 75px;
-    height: 75px;
+    width: 70px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,4 +113,11 @@ h2{
 
 .menu-active {
     transform: translateY(0);
+}
+
+/*========================== BODY ==========================*/
+
+/*================== Section ==================*/
+.section-p{
+    text-align: center;
 }
