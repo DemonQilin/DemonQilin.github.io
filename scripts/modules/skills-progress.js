@@ -11,18 +11,18 @@ export function cargar() {
             ? i + 1
             : (i + 1) % columns || columns
     }
-    
-    console.log(`Columns: ${columns} y Rows: ${rows}`)
 
     d.addEventListener('click', e => {
-        if (e.target.matches('[data-skill]')) {
-            const $skill = e.target,
+        if (e.target.matches('[data-skill]') || e.target.matches('[data-skill] *')) {
+            const $skill = e.target.closest('[data-skill]'),
                 $progressBar = $skill.querySelector('.progress-bar'),
                 $counter = $skill.querySelector('.counter'),
                 $progress = $skill.querySelector('.progress'),
                 $aviso = $skill.querySelector('.skill-aviso'),
-                $list = $skill.querySelector('.skill-list');
+                $list = $skill.querySelector('.skill-list'),
+                $figure = $skill.querySelector('.skill-figure');
             
+            $figure.classList.add('none');
             $aviso.classList.add('none');
             $progressBar.classList.remove('none');
             $progressBar.classList.add('visible');
