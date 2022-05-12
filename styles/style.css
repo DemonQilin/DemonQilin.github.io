@@ -31,7 +31,7 @@ body {
 
 h2{
     font-size: 3.2rem;
-    font-weight: 500;
+    font-weight: bold;
 
     color: var(--color-title);
     text-align: center;
@@ -245,4 +245,160 @@ h2{
 
 .services-btn:hover {
     transform: scale(1.5);
+}
+
+/*========================= SKILLS =========================*/
+
+.skills-title{
+    margin-top: 0;
+
+    color: var(--color-title);
+}
+
+.skills-list {
+    margin-top: 0;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: minmax(270px, auto);
+    gap: 2rem;
+
+    text-align: center;
+
+    list-style-type: none;
+}
+
+@media screen and (min-width: 450px){
+    .skills-list {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .skills-list {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+.skills-skill {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column nowrap;
+
+    font-weight: bold;
+    font-size: 1.8rem;
+
+    border-left: 3px solid var(--color-title);
+    border-top: 3px solid var(--color-title);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px var(--color-title);
+
+    overflow: hidden;
+    transition: color ease 0.2s, background-color ease 0.2s;
+}
+
+.skill-aviso {
+    margin-top: 1rem;
+
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.skill-loaded {
+    color: var(--color-fondo);
+    background-color: var(--color-claro);
+}
+
+/*=============== Barra de carga ===============*/
+
+.counter {
+    color: lightseagreen;
+    margin: 0;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    transition: opacity ease 0.2s;
+    opacity: 0;
+}
+
+.bar {
+    width: 100%;
+    height: 16px;
+    border: 3px solid;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%
+}
+
+.cargando {
+    animation: cargar 4s linear 0s 1 normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cargar {
+    0% {
+        background-color: lightseagreen;
+        transform: translateX(-100%);
+    }
+
+    25% {
+        background-color: greenyellow;
+        transform: translateX(-75%);
+    }
+
+    50% {
+        background-color: lightseagreen;
+        transform: translateX(-50%);
+    }
+
+    75% {
+        background-color: greenyellow;
+        transform: translateX(-25%);
+    }
+
+    100% {
+        background-color: lightseagreen;
+        transform: translateX(0%);
+    }
+}
+
+.none {
+    display: none;
+}
+
+.visible {
+    opacity: 1;
+}
+
+/*================== Sub-lista ==================*/
+
+.skill-list{
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+    padding-left: 20px;
+
+    list-style-type: disc;
+}
+
+.skill-item {
+    font-weight: normal;
+    font-size: 1.5rem;
+    text-align: left;
 }
