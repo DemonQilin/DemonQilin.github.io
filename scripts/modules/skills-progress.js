@@ -1,6 +1,19 @@
 const d = document;
 
 export function cargar() {
+    const $skills = d.querySelector('.skills-list'),
+        rows = getComputedStyle($skills).gridTemplateRows.match(/px/ig).length,
+        columns = getComputedStyle($skills).gridTemplateColumns.match(/px/ig).length;
+    
+    for (let i = 0; i < $skills.children.length; i++){
+        $skills.children[i].dataset.row = `${Math.ceil((i + 1) / columns)}`;
+        $skills.children[i].dataset.column = (i + 1) < columns
+            ? i + 1
+            : (i + 1) % columns || columns
+    }
+    
+    console.log(`Columns: ${columns} y Rows: ${rows}`)
+
     d.addEventListener('click', e => {
         if (e.target.matches('[data-skill]')) {
             const $skill = e.target,
@@ -20,16 +33,19 @@ export function cargar() {
             let progress = 0,
                 reloj;
             
-            reloj = setInterval(()=> {
+            reloj = setInterval(() => {
                 progress++;
                 $counter.textContent = `${progress}%`;
-                if (progress >= 100){
+                if (progress >= 100) {
                     clearInterval(reloj);
                     $progress.classList.remove('cargando');
-                    $skill.classList.add('skill-loaded');
+
+                    if (+$skill.dataset.row % 2 && !(+$skill.dataset.column % 2) || !(+$skill.dataset.row % 2) && +$skill.dataset.column % 2) $skill.classList.add('skill-loaded');
+
                     $progressBar.classList.add('none');
                     $progressBar.classList.remove('visible');
                     $list.classList.remove('none');
+                    $list.classList.add('visible');
                     $skill.removeAttribute('data-skill');
                 };
             }, $delta)

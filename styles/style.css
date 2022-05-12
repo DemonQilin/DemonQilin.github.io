@@ -262,6 +262,7 @@ h2{
     grid-template-columns: auto;
     grid-auto-rows: minmax(270px, auto);
     gap: 2rem;
+    
 
     text-align: center;
 
@@ -330,7 +331,7 @@ h2{
     flex-wrap: wrap;
     flex-direction: column;
 
-    transition: opacity ease 0.2s;
+    transition: opacity ease 0.3s;
     opacity: 0;
 }
 
@@ -347,8 +348,7 @@ h2{
 }
 
 .cargando {
-    animation: cargar 4s linear 0s 1 normal;
-    animation-fill-mode: forwards;
+    animation: cargar 1s linear 0s 1 normal forwards;
 }
 
 @keyframes cargar {
@@ -378,14 +378,6 @@ h2{
     }
 }
 
-.none {
-    display: none;
-}
-
-.visible {
-    opacity: 1;
-}
-
 /*================== Sub-lista ==================*/
 
 .skill-list{
@@ -393,12 +385,27 @@ h2{
     height: 100%;
     margin-top: 1rem;
     padding-left: 20px;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    
     list-style-type: disc;
+    opacity: 0;
+
+    transition: opacity ease 0.3s;
 }
 
 .skill-item {
     font-weight: normal;
     font-size: 1.5rem;
     text-align: left;
+}
+
+.none {
+    display: none;
+}
+
+.visible {
+    opacity: 1;
 }
