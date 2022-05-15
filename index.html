@@ -14,7 +14,26 @@
 </head>
 <body>
     <header class="header" id="home">
-        <h1 class="header-title">Soy <span>Juan</span> Desarrollador Frontend</h1>
+        <div class="container-title">
+            <h1 class="title">Soy<span class="title-span">Juan</span></h1>
+            <div class="title-line"></div>
+            <p class="title-description">Desarrollador Frontend</p>
+        </div>
+        <div class="circle"></div>
+        <div class="container-photo">
+            <img src="./assets/img/foto.png" alt="Foto de Juanes" class="photo">
+        </div>
+        <div class="container-experience">
+            <p class="experience-description"><span class="experience-span">4 meses</span> experiencia</p>
+            <div class="networks-container">
+                <a href="https://www.linkedin.com/in/juanes-velez/" target="_blank" rel="noopener noreferrer" class="network-link network-link--linkedin"></a>
+                <a href="https://github.com/DemonQilin" target="_blank" rel="noopener noreferrer" class="network-link network-link--github"></a>
+                <a href="https://twitter.com/JuanesVlez1" target="_blank" rel="noopener noreferrer" class="network-link network-link--twitter"></a>
+            </div>
+        </div>
+        <div class="container-cv">
+            <a href="https://cv-juanes-velez.netlify.app/" target="_blank" rel="noopener noreferrer" class="link-cv">Visitar CV Web 📄</a>
+        </div>
     </header>
     <nav class="menu">
         <ol class="menu-list">
@@ -23,7 +42,7 @@
             <li class="menu-item"><a href="#services" class="menu-link">Servicios</a></li>
             <li class="menu-item"><a href="#skills" class="menu-link">Habilidades</a></li>
             <li class="menu-item"><a href="#projects" class="menu-link">Proyectos</a></li>
-            <li class="menu-item"><a href="#section5" class="menu-link">Sección 5</a></li>
+            <li class="menu-item"><a href="#contact" class="menu-link">Contacto</a></li>
             <li class="menu-item"><a href="#section6" class="menu-link">Sección 6</a></li>
         </ol>
     </nav>
@@ -35,7 +54,7 @@
     <main>
         <section id="about" class="section">
             <h2 class="section-title">Acerca de mí</h2>
-            <p class="section-p">Soy un joven colombiano de 22 años, y vivo en la ciudad de Medellín. Me apasiona la tecnología, la programacion y los videojuegos, y así mismo el aprendizaje de las herramientas que giran entorno a ellas. Durante los últimos 4 meses he emprendido una carrera para convertirme en desarrollador web, actualmente estoy en nivel junior, y será un placer comenzar un proyecto juntos!!!</p>
+            <p class="section-p">Mi nombre es Juan Esteban Velez, soy un joven colombiano de 22 años, y vivo en la ciudad de <span class="mark mark--blue">Medellín</span>. Me apasiona la tecnología, la <span class="mark mark--violet">programación</span> y los videojuegos, y así mismo el aprendizaje de las herramientas que giran entorno a ellas. Actualmente soy estudiante de <span class="mark mark--violet">desarrollo web</span> en Academlo, me encuentro en nivel <span class="mark mark--blue">junior</span> y si deseas iniciar un proyecto conmigo será un placer trabajar juntos.</p>
         </section>
         <section id="services" class="section">
             <h2 class="section-title">Servicios</h2>
@@ -229,7 +248,9 @@
                         <img src="./assets/img/batabit.gif" alt="" class="project-img">
                         <p class="project-description">Proyecto final de maquetación adaptativa desarrollado en el curso de Responsive Design de Platzi.</p>
                         <div class="project-btns">
-                            <a href="" title="Ver código" target="_blank" rel="noopener noreferrer" class="project-link"><span class="link-span link-span--github"></span>GitHub</a><a href="" title="Visitar sitio web" target="_blank" rel="noopener noreferrer" class="project-link"><span class="link-span link-span--visit"></span>Deploy</a></div>
+                            <a href="https://github.com/DemonQilin/Batatabit-platzi" title="Ver código" target="_blank" rel="noopener noreferrer" class="project-link"><span class="link-span link-span--github"></span>GitHub</a>
+                            <a href="https://batatabit-jevl.netlify.app/" title="Visitar sitio web" target="_blank" rel="noopener noreferrer" class="project-link"><span class="link-span link-span--visit"></span>Deploy</a>
+                        </div>
                     </div>
                 </article>
                 <!-- <article class="project">
@@ -243,8 +264,8 @@
                 </article> -->
             </section>
         </section>
-        <section id="section5" class="section">
-            <h2 class="section-title"></h2>
+        <section id="contact" class="section">
+            <h2 class="section-title">Contacto</h2>
         </section>
     </main>
     <footer></footer>

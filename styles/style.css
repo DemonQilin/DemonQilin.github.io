@@ -2,10 +2,10 @@
     /* VARIABLES CSS */
 
     /* Colores */
-    --color-title: #34B0BE;
-    --color-letra: #D1CECA;
-    --color-fondo: #242635;
-    --color-claro: #fff;
+    --color-title: #35b0bf;
+    --color-letra: #e5e5e5;
+    --color-fondo: #03051c;
+    --color-claro: #d2cecb;
 
     /* Tipografia */
     --font-family: 'Montserrat',
@@ -30,16 +30,233 @@ body {
 }
 
 h2{
-    font-size: 3.2rem;
+    font-size: 200%;
     font-weight: bold;
 
     color: var(--color-title);
-    text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+    main {
+        font-size: 115%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        font-size: 130%;
+    }
+}
 /*========================= HEADER =========================*/
-.header-title {
+.header {
+    --font-size-base: 3rem;
+    position: relative;
+
+    min-width: 280px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width: 425px){
+    .header {
+        --font-size-base: 4rem
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        --font-size-base: 6.7rem
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+        --font-size-base: 8rem
+    }
+}
+
+/*==================== Title ====================*/
+
+.container-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-size: var(--font-size-base);
+
+    width: 32%;
+}
+
+.title {
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: 100%;
+    font-weight: 500;
+}
+
+.title-span {
+    font-size: 120%;
+    font-weight: 700;
+
+    color: var(--color-title);
+}
+
+.title-line {
+    border-top: solid 2px var(--color-claro);
+}
+
+.title-description {
+    margin-bottom: 0;
+    margin-top: 1rem;
+
+    font-size: 53%;
+}
+
+/*================== Photo ==================*/
+.container-photo{
+    position: relative;
+
+    width: 70%;
+    max-width: 300px;
+}
+
+.circle{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #2a2b3d;
+    clip-path: circle();
+}
+
+.photo {
+    width: 100%;
+}
+
+/*================ Experience ================*/
+.container-experience {
+    position: absolute;
+    top: 10%;
+    right: 0;
+
+    width: 35%;
+
+    font-size: var(--font-size-base);
+}
+
+.experience-description {
+    margin-top: 0;
+
+    font-weight: 600;
+    font-size: 53%;
+}
+
+.experience-span {
+    color: var(--color-title);
+}
+
+/*================= Networks =================*/
+.networks-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.network-link {
+    position: relative;
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.network-link::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+    background-color: var(--color-fondo);
+}
+
+.network-link--github{
+    background-image: url('./../assets/icons/github-filled.svg');
+}
+
+.network-link--linkedin {
+    background-image: url('./../assets/icons/linkedin-filled.svg');
+}
+
+.network-link--twitter {
+    background-image: url('./../assets/icons/twitter.svg');
+}
+
+@media screen and (min-width: 425px) {
+    .network-link {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .networks-container {
+        justify-content: start;
+        gap: 1rem;
+    }
+
+    .network-link {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/*===================== CV =====================*/
+.container-cv {
+    width: 100%;
+    max-width: 605px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: var(--font-size-base);
+
+    background-color: #2a2b3d;
+    border-radius: 5px;
+}
+
+.link-cv {
+    display: inline-block;
+    padding: 0.5rem;
+
+    font-size: 53%;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+
+    background-color: var(--color-claro);
+    color: var(--color-fondo);
+    border-radius: 5px;
 }
 
 /*========================= NAVBAR =========================*/
@@ -127,6 +344,8 @@ h2{
     width: 100%;
     min-width: 280px;
     max-width: 900px;
+
+    text-align: center;
 }
 
 .section-title{
@@ -136,8 +355,6 @@ h2{
 
 .section-p{
     margin: 0 auto;
-
-    text-align: center;
 }
 
 
@@ -172,7 +389,7 @@ h2{
     align-items: center;
 
 
-    background-color: var(--color-claro);
+    background-color: var(--color-letra);
     border-radius: 10px;
     box-shadow: 5px 5px 5px var(--color-title);
 
@@ -188,7 +405,7 @@ h2{
     width: 100%;
     height: 50%;
 
-    background-color: #f3f3f3;
+    background-color: var(--color-claro);
     border-bottom-left-radius: 50% 100%;
     border-bottom-right-radius: 50% 100%;
 }
@@ -201,7 +418,7 @@ h2{
     margin-top: 0;
 
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 138%;
 
     color: var(--color-title);
 }
@@ -215,7 +432,7 @@ h2{
     margin: 0;
 
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 100%;
 
     color: var(--color-fondo);
 }
@@ -262,8 +479,9 @@ h2{
 .skills-title{
     margin-top: 0;
 
-    font-size: 2.5rem;
+    font-size: 156%;
     font-weight: 500;
+    text-align: left;
 
     color: var(--color-title);
 }
@@ -301,7 +519,7 @@ h2{
     flex-flow: column nowrap;
 
     font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 113%;
 
     border-left: 3px solid var(--color-title);
     border-top: 3px solid var(--color-title);
@@ -322,7 +540,7 @@ h2{
 .skill-aviso {
     margin-top: 1rem;
 
-    font-size: 1.2rem;
+    font-size: 75%;
     font-weight: normal;
 }
 
@@ -349,7 +567,7 @@ h2{
 .counter {
     color: lightseagreen;
     margin: 0;
-    font-size: 2rem;
+    font-size: 125%;
     margin-bottom: 0.5rem;
 }
 
@@ -421,6 +639,8 @@ h2{
     flex-wrap: wrap;
     justify-content: start;
     align-items: center;
+
+    font-size: 83%;
     
     list-style-type: disc;
     opacity: 0;
@@ -430,7 +650,7 @@ h2{
 
 .skill-item {
     font-weight: normal;
-    font-size: 1.5rem;
+    font-size: 94%;
     text-align: left;
 }
 
@@ -486,9 +706,13 @@ h2{
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 1rem 0;
+
+    font-size: 140%;
     
     color: aliceblue;
     background-color: hsla(186, 57%, 47%);
+
+    clip-path: polygon(0 0, 0 80%, 100% 100%, 100% 20%);
 }
 
 .project-contain {
@@ -553,4 +777,45 @@ h2{
 
 .link-span--visit {
     background-image: url(./../assets/icons/internet.svg);
+}
+
+/*======================= MARKS TEXT =======================*/
+.mark {
+    --color-title: transparent;
+    position: relative;
+    display: inline-block;
+
+    transition: transform 0.5s;
+}
+
+.mark:hover {
+    transform: scale(1.4) rotate(-4deg);
+    color: aliceblue;
+}
+
+.mark::before {
+    content: "";
+
+    width: 100%;
+    height: 100%;
+    padding: 0 4px;
+    position: absolute;
+    z-index: -1;
+
+    background-color: var(--color-title);
+    transform: rotate(-2deg) translate(-4px,-2px);
+
+    transition: transform 0.5s;
+}
+
+.mark:hover::before {
+    transform: rotate(2deg) translateX(-4px) scale(1.2);
+}
+
+.mark--violet {
+    --color-title: #6441a5;
+}
+
+.mark--blue {
+    --color-title: rgb(7,101,215);
 }
