@@ -1,7 +1,7 @@
 const d = document;
 
 let scrollSpy = new IntersectionObserver(markSection, {
-    threshold: 0.5
+    threshold: 0.4
 });
 
 function markSection(entries) {
@@ -24,5 +24,5 @@ export function observerMenu() {
 
 export function deleteObserver() {
     scrollSpy.disconnect();
-    d.querySelector('a.menu-link[href]').classList.remove('spy');
+    d.querySelectorAll('a.menu-link[href]').forEach(el => el.classList.remove('spy'));
 }
