@@ -1,7 +1,7 @@
 const d = document;
 
 let scrollSpy = new IntersectionObserver(markSection, {
-    threshold: 0.5
+    threshold: 0.4
 });
 
 function markSection(entries) {

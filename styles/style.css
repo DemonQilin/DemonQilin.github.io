@@ -29,6 +29,10 @@ body {
     background-color: var(--color-fondo);
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 h2{
     font-size: 200%;
     font-weight: bold;
@@ -40,6 +44,10 @@ main {
     grid-area: main;
 }
 
+.wrap {
+    grid-area: wrapper;
+}
+
 @media screen and (min-width: 768px) {
     main {
         font-size: 115%;
@@ -47,9 +55,29 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
+    body {
+        position: relative;
+        
+        height: 100vh;
+        padding: 0;
+        display: grid;
+        grid-template-areas:
+        "nav"
+        "wrapper";
+        grid-template-rows: auto auto;
+    }
+
     main {
-        padding: 2rem;
         font-size: 130%;
+    }
+
+    .wrap{
+        padding: 2rem 2rem 0;
+        overflow: auto;
+    }
+
+    .wrap::-webkit-scrollbar {
+        display: none;
     }
 }
 /*========================= HEADER =========================*/
@@ -76,9 +104,6 @@ main {
 
 @media screen and (min-width: 768px) {
     .header {
-        margin-top: 2rem;
-        padding: 0 2rem;
-
         --font-size-base: 6.7rem
     }
 }
@@ -320,30 +345,20 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
-    body {
-        position: relative;
-
-        padding: 0;
-        display: grid;
-        grid-template-areas:
-        "nav header"
-        "nav main";
-        grid-template-columns: 20% 80%;
-        grid-template-rows: auto auto;
-    }
-
     .menu {
-        position: sticky;
-        top: 0;
+        position: static;
 
         width: unset;
+        height: 65px;
 
-        font-size: 80%;
+        font-size: 70%;
 
         transform: none;
     }
 
     .menu-list {
+        flex-direction: row;
+
         justify-content: space-between;
     }
 
