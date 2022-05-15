@@ -36,6 +36,10 @@ h2{
     color: var(--color-title);
 }
 
+main {
+    grid-area: main;
+}
+
 @media screen and (min-width: 768px) {
     main {
         font-size: 115%;
@@ -44,6 +48,7 @@ h2{
 
 @media screen and (min-width: 1024px) {
     main {
+        padding: 2rem;
         font-size: 130%;
     }
 }
@@ -52,6 +57,7 @@ h2{
     --font-size-base: 3rem;
     position: relative;
 
+    width: 100%;
     min-width: 280px;
     max-width: 900px;
     margin-left: auto;
@@ -59,6 +65,7 @@ h2{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    grid-area: header;
 }
 
 @media screen and (min-width: 425px){
@@ -69,6 +76,9 @@ h2{
 
 @media screen and (min-width: 768px) {
     .header {
+        margin-top: 2rem;
+        padding: 0 2rem;
+
         --font-size-base: 6.7rem
     }
 }
@@ -89,6 +99,12 @@ h2{
     font-size: var(--font-size-base);
 
     width: 32%;
+}
+
+@media screen and (min-width: 768px) {
+    .container-title {
+        left: 2rem;
+    }
 }
 
 .title {
@@ -115,7 +131,7 @@ h2{
     margin-bottom: 0;
     margin-top: 1rem;
 
-    font-size: 53%;
+    font-size: 50%;
 }
 
 /*================== Photo ==================*/
@@ -154,11 +170,17 @@ h2{
     font-size: var(--font-size-base);
 }
 
+@media screen and (min-width: 768px) {
+    .container-experience {
+        right: 2rem;
+    }
+}
+
 .experience-description {
     margin-top: 0;
 
     font-weight: 600;
-    font-size: 53%;
+    font-size: 50%;
 }
 
 .experience-span {
@@ -169,7 +191,7 @@ h2{
 .networks-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -229,7 +251,6 @@ h2{
         height: 60px;
     }
 }
-
 /*===================== CV =====================*/
 .container-cv {
     width: 100%;
@@ -249,7 +270,7 @@ h2{
     display: inline-block;
     padding: 0.5rem;
 
-    font-size: 53%;
+    font-size: 50%;
     text-decoration: none;
     font-weight: 600;
     text-align: center;
@@ -270,6 +291,9 @@ h2{
 
     height: 100vh;
     width: 100vw;
+    grid-area: nav;
+
+    font-size: 100%;
 
     background-color: hsla(0, 0%, 0%, 0.861);
 
@@ -289,6 +313,45 @@ h2{
     list-style-type: none;
 }
 
+@media screen and (min-width: 768px) {
+    .menu {
+        font-size: 115%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        position: relative;
+
+        padding: 0;
+        display: grid;
+        grid-template-areas:
+        "nav header"
+        "nav main";
+        grid-template-columns: 20% 80%;
+        grid-template-rows: auto auto;
+    }
+
+    .menu {
+        position: sticky;
+        top: 0;
+
+        width: unset;
+
+        font-size: 80%;
+
+        transform: none;
+    }
+
+    .menu-list {
+        justify-content: space-between;
+    }
+
+    button.btn-menu {
+        display: none;
+    }
+}
+
 .menu-item {
     width: 100%;
     text-align: center;
@@ -299,7 +362,7 @@ h2{
     padding: 2rem;
 
     text-decoration: none;
-    font-size: 2.5rem;
+    font-size: 156.25%;
 
     color: inherit;
     border-radius: 10px;
@@ -334,6 +397,13 @@ h2{
     transform: translateY(0);
 }
 
+/*================== Scroll-Spy ==================*/
+.spy {
+    font-weight: 600;
+
+    color: var(--color-fondo);
+    background-color: var(--color-title);
+}
 /*========================== BODY ==========================*/
 
 /*========================= SECTION =========================*/

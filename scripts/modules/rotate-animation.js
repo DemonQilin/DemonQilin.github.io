@@ -35,6 +35,8 @@ export function sacudirObserver() {
         skill.removeEventListener('mouseleave', removeAnimation);
     });
 
+    d.removeEventListener('click', addAnimationClick);
+
     const intersection = entries => {
 
         entries.forEach(entry => {

@@ -4,6 +4,7 @@ import { cargar } from "./modules/skills-progress.js";
 import { slideServices } from "./modules/slide-services.js";
 import { mediaResponsiveFunction } from "./modules/set-function-responsive.js";
 import { sacudirClick, sacudirMouseOver, sacudirObserver } from "./modules/rotate-animation.js";
+import { observerMenu } from "./modules/observer-menu.js";
 
 
 // VARIABLES
@@ -17,4 +18,5 @@ d.addEventListener('DOMContentLoaded', e => {
     slideServices();
     cargar();
     mediaResponsiveFunction(1024, sacudirMouseOver, sacudirObserver, 768, sacudirClick);
+    observerMenu()
 });
