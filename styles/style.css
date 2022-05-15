@@ -739,14 +739,6 @@ main {
     text-align: left;
 }
 
-.none {
-    display: none;
-}
-
-.visible {
-    opacity: 1;
-}
-
 /*============== Animación Sacudida ==============*/
 
 .sacudir {
@@ -903,4 +895,110 @@ main {
 
 .mark--blue {
     --color-title: rgb(7,101,215);
+}
+
+/*======================== CONTACTO ========================*/
+.form {
+    --form-ok-color: #4caf50;
+    --form-error-color: #f44336;
+    max-width: 525px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form legend {
+    margin: 1.6rem auto;
+    text-align: center;
+}
+
+.form-input {
+    display: block;
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    height: 4.5rem;
+
+    font-size: inherit;
+
+    border: thin solid var(--main-color);
+}
+
+.form-input--description {
+    height: 13.5rem;
+    font-family: inherit;
+    resize: none;
+}
+
+.form-submit {
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    width: 50%;
+
+    font-weight: bold;
+
+    background-color: var(--color-title);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    color: var(--color-letra);
+}
+
+.form--validate [required]:valid {
+    border: thin solid var(--form-ok-color);
+}
+
+.form--validate [required]:invalid {
+    border: thin solid var(--form-error-color);
+}
+
+.aviso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+
+    background-color: var(--form-error-color);
+    color: var(--color-claro);
+}
+
+.contact-form-loader {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form-response {
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-form-response--correct {
+    color: var(--form-ok-color);
+}
+
+.contact-form-response--error {
+    color: var(--form-error-color);
+}
+
+/*=================== Clases removibles ===================*/
+.none {
+    display: none;
+}
+
+.visible {
+    opacity: 1;
+}
+
+/*========================= FOOTER =========================*/
+.footer {
+    margin-top: 3rem;
+    height: 100px;
+
+    background-color: var(--color-claro);
 }

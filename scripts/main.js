@@ -5,13 +5,12 @@ import { slideServices } from "./modules/slide-services.js";
 import { mediaResponsiveFunction } from "./modules/set-function-responsive.js";
 import { sacudirClick, sacudirMouseOver, sacudirObserver } from "./modules/rotate-animation.js";
 import { deleteObserver, observerMenu } from "./modules/observer-menu.js";
+import validarFormulario from "./modules/validar-formulario.js";
+import { enviarInformacion } from "./modules/submit-contact.js";
 
 
 // VARIABLES
 const d = document;
-
-// FUNCIONES
-
 
 d.addEventListener('DOMContentLoaded', e => {
     hamburguerMenu('.btn-menu', '.menu', '.menu-link');
@@ -19,4 +18,6 @@ d.addEventListener('DOMContentLoaded', e => {
     cargar();
     mediaResponsiveFunction(1024, sacudirMouseOver, sacudirObserver, 768, sacudirClick);
     mediaResponsiveFunction(1024, observerMenu, deleteObserver);
+    validarFormulario('form-contact');
+    enviarInformacion('form-contact');
 });

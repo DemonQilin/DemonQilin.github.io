@@ -315,9 +315,23 @@
             </section>
             <section id="contact" class="section" data-menu>
                 <h2 class="section-title">Contacto</h2>
+                <form action="" id="form-contact" class="form form--validate">
+                    <legend>Dejame tus datos si estás interesado y te contactaré en las próximas 48 horas.</legend>
+                    <input type="text" name="name" class="form-input" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required data-validar data-message="Nombre sólo acepta letras y espacios en blanco">
+                    <input type="email" name="email" class="form-input" placeholder="Escribe tu correo electrónico" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required data-validar data-message="Email incorrecto">
+                    <input type="text" name="issue" class="form-input" placeholder="Asunto a tratar" required pattern="^.{1,50}$" data-validar data-message="Tu asunto no debe exceder los 50 caracteres">
+                    <textarea name="description" rows="5" class="form-input form-input--description" placeholder="Descripción" required data-validar data-message="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$"></textarea>
+                    <input type="submit" class="form-submit" value="Enviar" data-submit>
+                    <div class="contact-form-loader none">
+                        <img src="./assets/icons/loader.svg" alt="Cargando">
+                    </div>
+                    <div class="contact-form-response none">
+                        <p>Los datos han sido enviados</p>
+                    </div>
+                </form>
             </section>
         </main>
-        <footer></footer>
+        <footer class="footer"></footer>
     </div>
     <script src="./scripts/main.js" type="module"></script>
 </body>
