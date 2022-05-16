@@ -24,11 +24,12 @@
             <li class="menu-item"><a href="#contact" class="menu-link">Contacto</a></li>
         </ol>
     </nav>
-    <button class="btn-menu hamburger hamburger--vortex" type="button">
+    <button class="btn btn--menu hamburger hamburger--vortex" type="button">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
     </button>
+    <button class="btn btn--scroll hidden">&#11014;</button>
     <div class="wrap">
         <header class="header" id="home" data-menu>
             <div class="container-title">
@@ -61,11 +62,11 @@
                 <h2 class="section-title">Acerca de mí</h2>
                 <p class="section-p">Mi nombre es Juan Esteban Velez, soy un joven colombiano de 22 años, y vivo en la
                     ciudad de
-                    <span class="mark mark--blue">Medellín</span>. Me apasiona la tecnología, la <span
-                        class="mark mark--violet">programación</span> y los videojuegos, y así mismo el aprendizaje de las
+                    <span class="mark mark--blue"><span>Medellín</span></span>. Me apasiona la tecnología, la <span
+                        class="mark mark--violet"><span>programación</span></span> y los videojuegos, y así mismo el aprendizaje de las
                     herramientas que giran entorno a ellas. Actualmente soy estudiante de <span
-                        class="mark mark--violet">desarrollo web</span> en Academlo, me encuentro en nivel <span
-                        class="mark mark--blue">junior</span> y si deseas iniciar un proyecto conmigo será un placer
+                        class="mark mark--violet"><span>desarrollo web</span></span> en Academlo, me encuentro en nivel <span
+                        class="mark mark--blue"><span>junior</span></span> y si deseas iniciar un proyecto conmigo será un placer
                     trabajar
                     juntos.
                 </p>
@@ -276,6 +277,15 @@
                             <img src="./assets/img/pokeface.gif" alt="Muestra de la página pokeface" class="project-img">
                             <p class="project-description">Proyecto personal con temática de pokemon que busca imitar la
                                 apariencia de la red social de Instagram.</p>
+                            <div class="tecnhology-container">
+                                <h4 class="project-title-tecnhology">
+                                    Tecnologías:
+                                </h4>
+                                <ul class="project-tecnhology-list">
+                                    <li class="tecnhology-item mark mark--html"><span>HTML5</span></li>
+                                    <li class="tecnhology-item mark mark--css"><span>CSS3</span></li>
+                                </ul>
+                            </div>
                             <div class="project-btns">
                                 <a href="https://github.com/DemonQilin/Pokeface" class="project-link" title="Ver código"
                                     target="_blank" rel="noopener noreferrer"><span
@@ -293,6 +303,15 @@
                             <p class="project-description">Proyecto final de maquetación adaptativa desarrollado en el curso
                                 de
                                 Responsive Design de Platzi.</p>
+                            <div class="tecnhology-container">
+                                <h4 class="project-title-tecnhology">
+                                    Tecnologías:
+                                </h4>
+                                <ul class="project-tecnhology-list">
+                                    <li class="tecnhology-item mark mark--html"><span>HTML5</span></li>
+                                    <li class="tecnhology-item mark mark--css"><span>CSS3</span></li>
+                                </ul>
+                            </div>
                             <div class="project-btns">
                                 <a href="https://github.com/DemonQilin/Batatabit-platzi" title="Ver código" target="_blank"
                                     rel="noopener noreferrer" class="project-link"><span
@@ -303,15 +322,26 @@
                             </div>
                         </div>
                     </article>
-                    <!-- <article class="project">
-                                <h3 class="project-title">Project 3</h3>
-                                <div class="project-contain">
-                                    <img src="" alt="" class="project-img">
-                                    <p class="project-description">lorem5</p>
-                                    <div class="project-btns">
-                                        <a href="" title="Ver código" target="_blank" rel="noopener noreferrer" class="project-link"><span class="link-span link-span--github"></span></a><a href="" title="Visitar sitio web" target="_blank" rel="noopener noreferrer" class="project-link"><span class="link-span link-span--visit"></span></a></div>
-                                </div>
-                            </article> -->
+                    <template id="template-project">
+                        <article class="project">
+                                    <h3 class="project-title"></h3>
+                                    <div class="project-contain">
+                                        <img src="" alt="" class="project-img">
+                                        <p class="project-description"></p>
+                                        <div class="tecnhology-container">
+                                            <h4 class="project-title-tecnhology">
+                                                Tecnologías:
+                                            </h4>
+                                            <ul class="project-tecnhology-list">
+                                                <li class="tecnhology-item mark mark--html"><span>HTML5</span></li>
+                                                <li class="tecnhology-item mark mark--css"><span>CSS3</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="project-btns">
+                                            <a href="" title="Ver código" target="_blank" rel="noopener noreferrer" class="project-link"><span class="link-span link-span--github"></span></a><a href="" title="Visitar sitio web" target="_blank" rel="noopener noreferrer" class="project-link"><span class="link-span link-span--visit"></span></a></div>
+                                    </div>
+                                </article>
+                    </template>
                 </section>
             </section>
             <section id="contact" class="section" data-menu>

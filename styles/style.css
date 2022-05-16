@@ -300,7 +300,7 @@ main {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
 
     height: 100vh;
     width: 100vw;
@@ -350,7 +350,7 @@ main {
         justify-content: space-between;
     }
 
-    button.btn-menu {
+    button.btn--menu {
         display: none;
     }
 }
@@ -380,20 +380,28 @@ main {
 
 /*================ Activator Button ================*/
 
-.btn-menu{
+.btn{
     position: fixed;
-    bottom: 1vh;
-    right: 1vw;
-    z-index: 1;
+    bottom: 0.5rem;
+    right: 0.5rem;
 
+    padding: 0;
     width: 70px;
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     border-radius: 50%;
     background-color: var(--color-title);
+    border: 2px solid black;
+
+    cursor: pointer;
+}
+
+.btn--menu {
+    z-index: 2;
 }
 
 .menu-active {
@@ -407,7 +415,75 @@ main {
     color: var(--color-fondo);
     background-color: var(--color-title);
 }
+
+/*==================== BUTTON-SCROLL ====================*/
+.btn--scroll {
+    left: 0.5rem;
+    z-index: 1;
+
+    font-size: 5rem;
+
+    transition: opacity ease 0.3s, visibility ease 0.3s;
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+    .btn--scroll {
+        left: unset;
+        right: 1rem;
+    }
+}
+
 /*========================== BODY ==========================*/
+
+/*======================= MARKS TEXT =======================*/
+.mark {
+    --color-title: transparent;
+    position: relative;
+    display: inline-block;
+
+    transition: transform 0.5s;
+}
+
+.mark span {
+    position: relative;
+}
+
+.mark:hover {
+    transform: scale(1.4) rotate(-4deg);
+    color: aliceblue;
+}
+
+.mark::before {
+    content: "";
+
+    width: 100%;
+    height: 100%;
+    padding: 0 4px;
+    position: absolute;
+
+    background-color: var(--color-title);
+    transform: rotate(-2deg) translate(-4px, -2px);
+
+    transition: transform 0.5s;
+}
+
+.mark:hover::before {
+    transform: rotate(2deg) translateX(-4px) scale(1.2);
+}
+
+.mark--violet {
+    --color-title: #6441a5;
+}
+
+.mark--blue {
+    --color-title: rgb(7, 101, 215);
+}
 
 /*========================= SECTION =========================*/
 .section {
@@ -793,6 +869,46 @@ main {
     margin-bottom: 1rem;
 }
 
+/*================= Project Tecnology =================*/
+.tecnhology-container {
+    margin: 1rem 0;
+    display: grid;
+    grid-template-areas: "title techs";
+    grid-template-columns: minmax(25%, auto) minmax(auto, 75%);
+    gap: 1rem;
+}
+
+.project-title-tecnhology {
+    margin: 0;
+    grid-area: title;
+
+    text-align: left;
+}
+
+.project-tecnhology-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 2rem;
+
+    list-style-type: none;
+}
+
+.mark--html {
+    --color-title: #e34c26;
+}
+
+.mark--css{
+    --color-title: #4c79e3;
+}
+
+.mark--js {
+    --color-title: #b1a413;
+}
+
 .project-btns {
     padding: 0 1rem 0.8rem;
     display: flex;
@@ -844,46 +960,6 @@ main {
     background-image: url(./../assets/icons/internet.svg);
 }
 
-/*======================= MARKS TEXT =======================*/
-.mark {
-    --color-title: transparent;
-    position: relative;
-    display: inline-block;
-
-    transition: transform 0.5s;
-}
-
-.mark:hover {
-    transform: scale(1.4) rotate(-4deg);
-    color: aliceblue;
-}
-
-.mark::before {
-    content: "";
-
-    width: 100%;
-    height: 100%;
-    padding: 0 4px;
-    position: absolute;
-    z-index: -1;
-
-    background-color: var(--color-title);
-    transform: rotate(-2deg) translate(-4px,-2px);
-
-    transition: transform 0.5s;
-}
-
-.mark:hover::before {
-    transform: rotate(2deg) translateX(-4px) scale(1.2);
-}
-
-.mark--violet {
-    --color-title: #6441a5;
-}
-
-.mark--blue {
-    --color-title: rgb(7,101,215);
-}
 
 /*======================== CONTACTO ========================*/
 .form {
