@@ -1,4 +1,4 @@
-const d = document;
+    const d = document;
 
 export function enviarInformacion(form) {
     const $form = d.getElementById(form);
@@ -30,7 +30,7 @@ export function enviarInformacion(form) {
             if (res.ok) {
                 $response.querySelector('p').textContent = '✅ Tus datos fueron recibidos con éxito. ¡En breve me comunicaré contigo!'
                 $response.querySelector('p').classList.add('contact-form-response--correct');
-            $response.classList.remove('none');
+                $response.classList.remove('none');
             } else {
                 throw dataR
             }
