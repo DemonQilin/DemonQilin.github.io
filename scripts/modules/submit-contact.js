@@ -28,7 +28,7 @@ export function enviarInformacion(form) {
             $loader.classList.add('none');
             
             if (res.ok) {
-                $response.querySelector('p').textContent = '✅ Datos recibidos con éxito'
+                $response.querySelector('p').textContent = '✅ Tus datos fueron recibidos con éxito. ¡En breve me comunicaré contigo!'
                 $response.querySelector('p').classList.add('contact-form-response--correct');
             $response.classList.remove('none');
             } else {
@@ -38,7 +38,7 @@ export function enviarInformacion(form) {
             if (Object.hasOwn(error, 'errors')) {
                 $response.querySelector('p').textContent = `❌ Algo salió mal - ${error['errors'].map(err => err['message']).join(', ')}`;
             } else {
-                $response.querySelector('p').textContent = `❌ Algo salió mal. Error # ${error.status}:${error.statusText || 'Ocurrió un error'}`
+                $response.querySelector('p').textContent = `❌ Algo salió mal. Error # ${error.status}:${error.statusText || ''}`
             }
 
             $response.querySelector('p').classList.add('contact-form-response--error');

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0e96c498cb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
     <link rel="stylesheet" href="./styles/style.css">
@@ -40,7 +41,7 @@
                 <img src="./assets/img/foto.png" alt="Foto de Juanes" class="photo">
             </div>
             <div class="container-experience">
-                <p class="experience-description"><span class="experience-span">4 meses</span> experiencia</p>
+                <p class="experience-description"><span class="experience-span">Bienvenido</span> a mi portafolio</p>
                 <div class="networks-container">
                     <a href="https://www.linkedin.com/in/juanes-velez/" target="_blank" rel="noopener noreferrer"
                         class="network-link network-link--linkedin"></a>
@@ -316,7 +317,7 @@
             <section id="contact" class="section" data-menu>
                 <h2 class="section-title">Contacto</h2>
                 <form action="" id="form-contact" class="form form--validate">
-                    <legend>Dejame tus datos si estás interesado y te contactaré en las próximas 48 horas.</legend>
+                    <legend>Si estás interesado en iniciar un proyecto puedes dejarme tus datos en el siguiente formulario, y te estaré contactando en las próximas 48 horas.</legend>
                     <input type="text" name="name" class="form-input" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required data-validar data-message="Nombre sólo acepta letras y espacios en blanco">
                     <input type="email" name="email" class="form-input" placeholder="Escribe tu correo electrónico" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required data-validar data-message="Email incorrecto">
                     <input type="text" name="issue" class="form-input" placeholder="Asunto a tratar" required pattern="^.{1,50}$" data-validar data-message="Tu asunto no debe exceder los 50 caracteres">
@@ -331,7 +332,27 @@
                 </form>
             </section>
         </main>
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <div class="footer-redes-container">
+                <div class="line"></div>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="https://www.linkedin.com/in/juanes-velez/" target="_blank" rel="noopener noreferrer" class="footer-link" title="Visitar"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="https://www.linkedin.com/in/juanes-velez/" target="_blank" rel="noopener noreferrer" class="footer-link" title="Visitar"><i class="fa-brands fa-github"></i></a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="https://codepen.io/demonqilin" target="_blank" rel="noopener noreferrer" class="footer-link" title="Visitar"><i class="fa-brands fa-codepen"></i></a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="https://twitter.com/JuanesVlez1" target="_blank" rel="noopener noreferrer" class="footer-link" title="Visitar"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                </ul>
+                <div class="line"></div>
+            </div>
+            <p class="footer-copy">Juanes Velez in 2022 &copy;</p>
+        </footer>
     </div>
     <script src="./scripts/main.js" type="module"></script>
 </body>
