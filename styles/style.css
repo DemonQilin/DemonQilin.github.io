@@ -339,7 +339,7 @@ main {
         position: static;
 
         width: unset;
-        height: 65px;
+        height: unset;
 
         font-size: 70%;
 
