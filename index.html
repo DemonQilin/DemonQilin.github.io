@@ -220,6 +220,30 @@
                             </ul>
                         </li>
                         <li class="skills-skill" data-skill>
+                            REACT
+                            <figure class="skill-figure">
+                                <img class="skill-img" src="./assets/icons/react.svg" alt="Icono que representa HTML">
+                            </figure>
+                            <div class="skill-aviso">Click para ver más a detalle esta habilidad</div>
+                            <div class="progress-bar none">
+                                <div class="counter">0%</div>
+                                <div class="bar">
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                            <ul class="skill-list none">
+                                <li class="skill-item">
+                                    Implementación de componentes basados en clases y funciones.
+                                </li>
+                                <li class="skill-item">
+                                    Manipulación del estado y ciclo de vida de los componentes.
+                                </li>
+                                <li class="skill-item">
+                                    Manejo de eventos con el objetivo de controlar la interacción con el usuario.
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="skills-skill" data-skill>
                             Sistema de gestión de versiones (GIT)
                             <figure class="skill-figure">
                                 <img class="skill-img" src="./assets/icons/git.svg"
@@ -371,31 +395,38 @@
                             </div>
                         </div>
                     </article>
-                    <template id="template-project">
-                        <article class="project">
-                                    <h3 class="project-title"></h3>
-                                    <div class="project-contain">
-                                        <img src="" alt="" class="project-img">
-                                        <p class="project-description"></p>
-                                        <div class="tecnhology-container">
-                                            <h4 class="project-title-tecnhology">
-                                                Tecnologías:
-                                            </h4>
-                                            <ul class="project-tecnhology-list">
-                                                <li class="tecnhology-item mark mark--html"><span>HTML5</span></li>
-                                                <li class="tecnhology-item mark mark--css"><span>CSS3</span></li>
-                                            </ul>
-                                        </div>
-                                        <div class="project-btns">
-                                            <a href="" title="Ver código" target="_blank" rel="noopener noreferrer" class="project-link"><span class="link-span link-span--github"></span></a><a href="" title="Visitar sitio web" target="_blank" rel="noopener noreferrer" class="project-link"><span class="link-span link-span--visit"></span></a></div>
-                                    </div>
-                                </article>
-                    </template>
+                    <article class="project">
+                        <h3 class="project-title">Wiki Rick y Morty</h3>
+                        <div class="project-contain">
+                            <img src="./assets/img/rick-and-morty.gif" alt="Muestra del proyecto Intergalactic Marketplace" class="project-img">
+                            <p class="project-description">
+                                Proyecto hecho con ReactJS en donde se aplican conceptos básicos como manejo del estado, ciclo de vida y solicitudes asíncronas.
+                            </p>
+                            <div class="tecnhology-container">
+                                <h4 class="project-title-tecnhology">
+                                    Tecnologías:
+                                </h4>
+                                <ul class="project-tecnhology-list">
+                                    <li class="tecnhology-item mark mark--react"><span>React</span></li>
+                                    <li class="tecnhology-item mark mark--html"><span>HTML5</span></li>
+                                    <li class="tecnhology-item mark mark--css"><span>CSS3</span></li>
+                                </ul>
+                            </div>
+                            <div class="project-btns">
+                                <a href="https://github.com/DemonQilin/React-Api-Rick-And-Morty" title="Ver código" target="_blank"
+                                    rel="noopener noreferrer" class="project-link"><span
+                                        class="link-span link-span--github"></span>Código</a>
+                                <a href="https://rick-and-morty-jevl.netlify.app/" title="Visitar sitio web" target="_blank"
+                                    rel="noopener noreferrer" class="project-link"><span
+                                        class="link-span link-span--visit"></span>Visitar</a>
+                            </div>
+                        </div>
+                    </article>
                 </section>
             </section>
             <section id="contact" class="section" data-menu>
                 <h2 class="section-title">Contacto</h2>
-                <form action="" id="form-contact" class="form form--validate">
+                <form action="" id="form-contact" class="form form--validate" autocomplete="off">
                     <legend>Si estás interesado en iniciar un proyecto puedes dejarme tus datos en el siguiente formulario, y te estaré contactando en las próximas 48 horas.</legend>
                     <input type="text" name="name" class="form-input" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required data-validar data-message="Nombre sólo acepta letras y espacios en blanco">
                     <input type="email" name="email" class="form-input" placeholder="Escribe tu correo electrónico" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required data-validar data-message="Email incorrecto">

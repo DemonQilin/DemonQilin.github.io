@@ -15,6 +15,7 @@ export default function validarFormulario(form) {
 
     const validarRegExp = (input) => {
         let pattern = input.pattern || input.dataset.pattern;
+        console.log(pattern && input.value !== '');
 
         if (pattern && input.value !== '') {
             let regex = new RegExp(pattern);
@@ -25,6 +26,9 @@ export default function validarFormulario(form) {
                 d.getElementById(input.name).classList.add('none');
                 $submit.disabled = false;
             }
+        } else if (input.value === '') {
+            d.getElementById(input.name).classList.add('none');
+            $submit.disabled = false;
         }
 
         if (!pattern) {

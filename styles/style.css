@@ -74,9 +74,9 @@ main {
         overflow: auto;
     }
 
-    .wrap::-webkit-scrollbar {
+    /* .wrap::-webkit-scrollbar {
         display: none;
-    }
+    } */
 }
 /*========================= HEADER =========================*/
 .header {
@@ -288,8 +288,7 @@ main {
     font-weight: 600;
     text-align: center;
 
-    background-color: var(--color-claro);
-    color: var(--color-fondo);
+    color: inherit;
     border-radius: 5px;
 }
 
@@ -499,6 +498,12 @@ main {
     text-align: center;
 }
 
+@media screen and (min-width: 1024px) {
+    .section {
+        margin-top: 10vh;
+    }
+}
+
 .section-title{
     margin-top: 0;
     margin-bottom: 2rem;
@@ -624,7 +629,7 @@ main {
 
 /*========================= SKILLS =========================*/
 .skills {
-    margin-bottom: 3rem;
+    margin-top: 7rem;
 }
 
 .skills-title{
@@ -911,6 +916,10 @@ main {
     --color-title: #b1a413;
 }
 
+.mark--react {
+    --color-title: #00d8ff;
+}
+
 .project-btns {
     padding: 0 1rem 0.8rem;
     display: flex;
@@ -985,8 +994,11 @@ main {
     height: 4.5rem;
 
     font-size: inherit;
+    color: var(--color-letra);
 
-    border: thin solid var(--main-color);
+    border: thin solid var(--color-title);
+    border-radius: 10px;
+    background-color: transparent;
 }
 
 .form-input--description {
@@ -1013,14 +1025,6 @@ main {
 
 .form-submit:hover {
     color: var(--color-letra);
-}
-
-.form--validate [required]:valid {
-    border: thin solid var(--form-ok-color);
-}
-
-.form--validate [required]:invalid {
-    border: thin solid var(--form-error-color);
 }
 
 .aviso {
